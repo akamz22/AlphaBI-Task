@@ -1,1 +1,2 @@
 # AlphaBI-Task
+GIPHY API TASK

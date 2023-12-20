@@ -14,6 +14,10 @@ export default function Signin() {
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
             Sign in to your account
           </h2>
+          <div className='text-xl text-red-400'>
+            <p>Sample Email: giphy123@gmail.com</p>
+            <p>Password: giphy123</p>
+          </div>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -58,7 +62,7 @@ export default function Signin() {
               <button
                 onClick={() => signIn('credentials', { email, password, redirect: true, callbackUrl: '/giphylist' })}
                 disabled={!email || !password}
-                className="disabled:opacity-40 flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="disabled:opacity-40 flex w-full justify-center rounded-md bg-blue-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Sign in
               </button>

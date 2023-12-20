@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import  SessionProvider from './SessionProvider'
+import SessionProvider from './SessionProvider'
+import GlobalState from './context/page'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -10,12 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='h-full'>
-      <body className='h-full'>
-        <SessionProvider>
-          {children}
-        </SessionProvider>
-      </body>
-    </html>
+    <GlobalState>
+      <html lang="en" className='h-full'>
+        <body className='h-full'>
+          <SessionProvider>
+            {children}
+          </SessionProvider>
+        </body>
+      </html>
+    </GlobalState>
   )
 }

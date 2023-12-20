@@ -1,7 +1,9 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { signOut, useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
+import logo from '../assets/logo.gif';
 export default function Header() {
     const session = useSession({
         required: true,
@@ -14,7 +16,7 @@ export default function Header() {
             <div className="container mx-auto flex justify-between items-center px-6">
                 <div className="flex items-center text-3xl">
                     <Link href="/giphylist">
-                        <p className='text-blue-700'>Giphy</p>
+                        <Image className='h-10 w-20 rounded-md' src={logo} alt="Giphy"/>
                     </Link>
                 </div>
                 <div className="flex items-center space-x-4">

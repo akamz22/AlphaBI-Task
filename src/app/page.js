@@ -8,6 +8,9 @@ export default function Home() {
     onUnauthenticated() {
       redirect('/signin');
     },
+    authenticated() {
+      redirect('/giphylist');
+    },
   });
   return (
     <div className="p-8">
